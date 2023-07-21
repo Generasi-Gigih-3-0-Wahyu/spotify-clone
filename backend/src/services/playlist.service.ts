@@ -1,19 +1,25 @@
 import { DocumentType, Ref } from "@typegoose/typegoose";
-import PlaylistModel, { Playlist } from "../models/playlist.model";
+import { Playlist } from "../models/playlist.model";
 import { Song } from "../models/song.model";
+import { PlaylistModel } from "../models";
 
 export function createPlaylist(input: Partial<Playlist>) {
   return PlaylistModel.create(input);
 }
 
 export function findPlaylistByUserId(userId: string) {
-  return PlaylistModel.find({ owner: userId }).populate({
-    path: "songs",
-    populate: {
-      path: "_song",
+  return PlaylistModel.find({ owner: userId })
+    .populate({
+      path: "songs._song",
       model: "Song",
-    },
-  });
+      select: { __v: 0, createdAt: 0, updatedAt: 0 },
+      populate: {
+        path: "artists",
+        model: "Artist",
+        select: { __id: 1, name: 1 },
+      },
+    })
+    .select({ __v: 0 });
 }
 
 export function findPlaylistById(id: string) {
@@ -28,7 +34,7 @@ export async function addSongToPlaylist(
   return playlist.save();
 }
 
-export async function playSong(
+export async function playPlaylistSong(
   playlist: DocumentType<Playlist>,
   song: Ref<Song>
 ) {
