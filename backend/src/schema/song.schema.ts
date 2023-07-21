@@ -6,7 +6,15 @@ export const createSongSchema = object({
     url: string({ required_error: "Url is required" }),
     imageUrl: string({ required_error: "Image URL is required" }),
     artists: string().array(),
+    album: string().optional(),
+  }),
+});
+
+export const playSongSchema = object({
+  params: object({
+    songId: string({ required_error: "Song ID is required" }),
   }),
 });
 
 export type CreateSongInput = TypeOf<typeof createSongSchema>["body"];
+export type PlaySongInput = TypeOf<typeof playSongSchema>["params"];

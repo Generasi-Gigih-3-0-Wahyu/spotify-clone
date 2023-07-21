@@ -1,4 +1,9 @@
-import { getModelForClass, prop } from "@typegoose/typegoose";
+import {
+  Ref,
+  prop,
+} from "@typegoose/typegoose";
+import { Artist } from "./artist.model";
+import { Album } from "./album.model";
 
 export class Song {
   @prop({ required: true })
@@ -10,14 +15,12 @@ export class Song {
   @prop({ required: true })
   imageUrl: string;
 
-  @prop({ type: () => [String], default: [] })
-  artists: string[];
+  @prop({ ref: () => Artist, default: [] })
+  artists: Ref<Artist>[];
+
+  @prop({ ref: () => Album, required: false })
+  album?: Ref<Album>;
+
+  @prop({ default: 0 })
+  playCount: number;
 }
-
-const SongModel = getModelForClass(Song, {
-  schemaOptions: {
-    timestamps: true,
-  },
-});
-
-export default SongModel;
