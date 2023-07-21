@@ -1,0 +1,362 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Spotify-Clone",
+    "dateExported": "2023-07-21T13:28:41.493Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "da16a55d-81bc-4b26-b8cf-bffc64b2ddcc",
+            "name": "Auth",
+            "containerId": "",
+            "created": "2023-07-13T02:49:13.371Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "ec88c63a-5658-4acd-b97c-c4df792517f6",
+            "name": "Playlist",
+            "containerId": "",
+            "created": "2023-07-13T02:49:32.797Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "685d7342-0c18-4a23-abc4-a91653c4563f",
+            "name": "Song",
+            "containerId": "",
+            "created": "2023-07-13T02:49:51.585Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "6f702fb5-8765-48a3-ae8b-885364eaf794",
+            "name": "Artist",
+            "containerId": "",
+            "created": "2023-07-18T09:33:22.337Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "301ccdb5-6ffd-4372-bb89-70ac2f8242c7",
+            "name": "Album",
+            "containerId": "",
+            "created": "2023-07-18T11:33:47.999Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "9828400d-9aca-47fe-b8c8-a3ec56caaa7e",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "da16a55d-81bc-4b26-b8cf-bffc64b2ddcc",
+            "name": "Register User",
+            "url": "http://localhost:5002/api/v1/users/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-11T18:46:29.674Z",
+            "modified": "2023-07-21T12:56:19.064Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"john\",\n  \"email\": \"john@mail.com\",\n  \"password\": \"password\",\n  \"passwordConfirmation\": \"password\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "609e81c3-f772-4818-bd70-5d434cf3afbd",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "ec88c63a-5658-4acd-b97c-c4df792517f6",
+            "name": "Create Playlist",
+            "url": "http://localhost:5002/api/v1/playlist/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-12T13:07:43.561Z",
+            "modified": "2023-07-21T13:04:12.365Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Playlist 1\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFmNTAyN2IyMzFlMTVkZDk2N2UzYjAiLCJuYW1lIjoiSHl1IiwiZW1haWwiOiJoeXVAbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJpYXQiOjE2ODk5NDQ2MjMsImV4cCI6MTY4OTk0NTUyM30.WXc4Cv_-8uzzdiAWY4xYxOAUNPK-X7Mwf5rxNnSRnaVFciQlgkTlRFCe9XKuwtAnFPjBRxXljwArPP4CFQG2tZO7ROFwEP633DER0lJXH5IMsWu3edI6ENONGlgIuGg_UGsHksJhWBkoxabiv9rHqG5x9JoWgwFibGrmpbjPGjmHeA4UYGb4fMrzIpqU1BCxlb99fBtfLfGCerrtwh0U7CSDRqtPSyZL1BwD9tPNuEm6_BiEY3Uv8Bl3RrERc6Nk5uZTTwVkIcMxNRgue1NR73ukbDEpDj7Q2lxZ9yrfHBobQa2dubqdSPhBTQCKUuz8q2f4k_-yf5_qtNgwLAAVog"
+            },
+            "tests": []
+        },
+        {
+            "_id": "bfa20daa-40d2-43c8-8e49-c116d6ef0df7",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "685d7342-0c18-4a23-abc4-a91653c4563f",
+            "name": "Create Song",
+            "url": "http://localhost:5002/api/v1/song/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-12T13:51:50.752Z",
+            "modified": "2023-07-21T05:39:02.850Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"I'm Invincible\",\n  \"url\": \"https://open.spotify.com/track/7yQnZkAxSiAavC0zFRB1NI?si=92d56bfb611e4717\",\n  \"imageUrl\": \"https://i.scdn.co/image/ab67616d000048510cbecafa929898c82adc519c\",\n  \"artists\": [\"64ba068d860306947719b419\"]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7e7c3cec-8fcc-4fcc-b13c-5ed6c4bfa765",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "",
+            "name": "Health Check",
+            "url": "http://localhost:5002/api/v1/",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2023-07-10T15:43:54.745Z",
+            "modified": "2023-07-14T12:45:00.171Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "035238b5-ee2e-44eb-a0db-735dbb05410f",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "da16a55d-81bc-4b26-b8cf-bffc64b2ddcc",
+            "name": "Login",
+            "url": "http://localhost:5002/api/v1/session/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-11T21:16:15.805Z",
+            "modified": "2023-07-13T01:15:28.660Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"hyu@mail.com\",\n  \"password\": \"password\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "23458db2-4790-43b2-b4f5-118373d7ecf2",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "685d7342-0c18-4a23-abc4-a91653c4563f",
+            "name": "Get All Song",
+            "url": "http://localhost:5002/api/v1/song/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-12T14:44:02.176Z",
+            "modified": "2023-07-12T14:44:19.494Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "41db09de-0c9c-4c0c-b710-2c4382e7c240",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "ec88c63a-5658-4acd-b97c-c4df792517f6",
+            "name": "Add Song to Playlist",
+            "url": "http://localhost:5002/api/v1/playlist/64ba824c37193b8c0431f655/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-12T15:22:57.966Z",
+            "modified": "2023-07-21T13:04:42.495Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"songId\": \"64ba06a1860306947719b41d\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFmNTAyN2IyMzFlMTVkZDk2N2UzYjAiLCJuYW1lIjoiSHl1IiwiZW1haWwiOiJoeXVAbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJpYXQiOjE2ODk5NDQ2MjMsImV4cCI6MTY4OTk0NTUyM30.WXc4Cv_-8uzzdiAWY4xYxOAUNPK-X7Mwf5rxNnSRnaVFciQlgkTlRFCe9XKuwtAnFPjBRxXljwArPP4CFQG2tZO7ROFwEP633DER0lJXH5IMsWu3edI6ENONGlgIuGg_UGsHksJhWBkoxabiv9rHqG5x9JoWgwFibGrmpbjPGjmHeA4UYGb4fMrzIpqU1BCxlb99fBtfLfGCerrtwh0U7CSDRqtPSyZL1BwD9tPNuEm6_BiEY3Uv8Bl3RrERc6Nk5uZTTwVkIcMxNRgue1NR73ukbDEpDj7Q2lxZ9yrfHBobQa2dubqdSPhBTQCKUuz8q2f4k_-yf5_qtNgwLAAVog"
+            },
+            "tests": []
+        },
+        {
+            "_id": "dd23fe63-c658-4936-8208-8e1feea61e56",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "da16a55d-81bc-4b26-b8cf-bffc64b2ddcc",
+            "name": "Refresh Access Token",
+            "url": "http://localhost:5002/api/v1/session/refresh/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-07-11T22:16:58.531Z",
+            "modified": "2023-07-21T13:03:43.865Z",
+            "headers": [
+                {
+                    "name": "x-refresh",
+                    "value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjRiYTgwNTYyYTYyNTUzMWEyMTdjYzUzIiwiaWF0IjoxNjg5OTQ0MTUwLCJleHAiOjE3MjE1MDE3NTB9.M2jnJyNdemNUKmOVaXb-rzm-aLPHx4p0C2XZSKbsZgvlxVVhwfsy78z4CwFGhZlOS4A80sCzjv-q93ezurnsaazGYG3wPF5VrpP7b9AoCc3JtnVnXj-sfoWgZy5KriBLXPrMFANYK3I5zfss31Cxa9r1VFwEC01fbzk2dmyEQ1C1BmAl1wxL14QE5h9lhgLVgNkv7D6MO_XnNJstgRFytyQGkHWPkmPGwu2tJwFOwJikoviEPRLSRkjNoXe8SU4llpFPk0J10jk2H9Bn6Jfe0PK15mU3_WN-q2nELaXLpL5QbPlFxWBZd6TAWFRz59t3Ifxc4LV2Y-O-OFVoJkAZnQ"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bb3cb8e1-d18f-4bfd-b7ae-2ae0aa3aef1c",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "ec88c63a-5658-4acd-b97c-c4df792517f6",
+            "name": "Get User Playlist",
+            "url": "http://localhost:5002/api/v1/playlist/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-07-12T16:15:21.856Z",
+            "modified": "2023-07-21T13:04:58.219Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFmNTAyN2IyMzFlMTVkZDk2N2UzYjAiLCJuYW1lIjoiSHl1IiwiZW1haWwiOiJoeXVAbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJpYXQiOjE2ODk5NDQ2MjMsImV4cCI6MTY4OTk0NTUyM30.WXc4Cv_-8uzzdiAWY4xYxOAUNPK-X7Mwf5rxNnSRnaVFciQlgkTlRFCe9XKuwtAnFPjBRxXljwArPP4CFQG2tZO7ROFwEP633DER0lJXH5IMsWu3edI6ENONGlgIuGg_UGsHksJhWBkoxabiv9rHqG5x9JoWgwFibGrmpbjPGjmHeA4UYGb4fMrzIpqU1BCxlb99fBtfLfGCerrtwh0U7CSDRqtPSyZL1BwD9tPNuEm6_BiEY3Uv8Bl3RrERc6Nk5uZTTwVkIcMxNRgue1NR73ukbDEpDj7Q2lxZ9yrfHBobQa2dubqdSPhBTQCKUuz8q2f4k_-yf5_qtNgwLAAVog"
+            },
+            "tests": []
+        },
+        {
+            "_id": "d75e5375-926c-4e83-9759-91674abb4928",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "da16a55d-81bc-4b26-b8cf-bffc64b2ddcc",
+            "name": "Get Me",
+            "url": "http://localhost:5002/api/v1/users/me",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-11T21:39:23.829Z",
+            "modified": "2023-07-21T13:25:07.254Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFmNTAyN2IyMzFlMTVkZDk2N2UzYjAiLCJuYW1lIjoiSHl1IiwiZW1haWwiOiJoeXVAbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJpYXQiOjE2ODk5NDU4OTgsImV4cCI6MTY4OTk0Njc5OH0.EbDV8I9vq7iWvg3jriUq0KHsxoLeBQd0lLcNDCQHycmB3bjuPYw2lHZLZNbauj1WLDOT3fYRJg4oVOUQ9JZMAj1Xzilsda7mzU5gfPa06NUCpl5pOCq10Cv8I1JQKZZRD7ebaGs7c69l2vnEsRsYFxwPoiABD0ex6m_vLC3-A_lEnEwqbsWVU69wW7u9MYu9DPm32ANj7vpe_ZIaYZcrS_ws9dshnykyclRWONMRyNA2NpS65U-SgFqmaxl3nkZF15iLkWKsYHkBXfDyFVXXvTCXZYslRVbO4fuAuU1F74hBQeSabfC_nycdi6QXGG3j_09AD6vIgtVcSkKZlld60A"
+            },
+            "tests": []
+        },
+        {
+            "_id": "804a351f-514a-441b-b629-92b5b110d010",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "ec88c63a-5658-4acd-b97c-c4df792517f6",
+            "name": "Play Song",
+            "url": "http://localhost:5002/api/v1/playlist/64ba0712860306947719b430/64ba06a1860306947719b41d/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-12T20:54:49.145Z",
+            "modified": "2023-07-21T13:12:37.114Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGFmNTAyN2IyMzFlMTVkZDk2N2UzYjAiLCJuYW1lIjoiSHl1IiwiZW1haWwiOiJoeXVAbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJ1cGRhdGVkQXQiOiIyMDIzLTA3LTEzVDAxOjE1OjE5LjM4MloiLCJpYXQiOjE2ODk5NDQ2MjMsImV4cCI6MTY4OTk0NTUyM30.WXc4Cv_-8uzzdiAWY4xYxOAUNPK-X7Mwf5rxNnSRnaVFciQlgkTlRFCe9XKuwtAnFPjBRxXljwArPP4CFQG2tZO7ROFwEP633DER0lJXH5IMsWu3edI6ENONGlgIuGg_UGsHksJhWBkoxabiv9rHqG5x9JoWgwFibGrmpbjPGjmHeA4UYGb4fMrzIpqU1BCxlb99fBtfLfGCerrtwh0U7CSDRqtPSyZL1BwD9tPNuEm6_BiEY3Uv8Bl3RrERc6Nk5uZTTwVkIcMxNRgue1NR73ukbDEpDj7Q2lxZ9yrfHBobQa2dubqdSPhBTQCKUuz8q2f4k_-yf5_qtNgwLAAVog"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0032dca8-6415-4083-863f-ee56d8a97b2c",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "6f702fb5-8765-48a3-ae8b-885364eaf794",
+            "name": "Create Artist",
+            "url": "http://localhost:5002/api/v1/artists/",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-07-18T09:33:29.816Z",
+            "modified": "2023-07-21T13:21:37.165Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Chase Goehring\",\n  \"dob\": \"1995-11-02T17:00:00.000Z\",\n  \"genres\": [\"J-Pop\"]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d52f137f-e3a3-4aec-a71c-07bc1a347f3c",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "6f702fb5-8765-48a3-ae8b-885364eaf794",
+            "name": "Get All Artist",
+            "url": "http://localhost:5002/api/v1/artists/",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-07-18T09:58:57.183Z",
+            "modified": "2023-07-18T09:59:10.104Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "588a71ab-6668-4474-81f0-52abfb3e1d18",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "301ccdb5-6ffd-4372-bb89-70ac2f8242c7",
+            "name": "Get All Album",
+            "url": "http://localhost:5002/api/v1/albums/",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-07-18T11:33:56.486Z",
+            "modified": "2023-07-18T11:34:12.252Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "58c11a29-b32f-47b9-82fe-86cb13359083",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "301ccdb5-6ffd-4372-bb89-70ac2f8242c7",
+            "name": "Create Album",
+            "url": "http://localhost:5002/api/v1/albums/",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2023-07-18T11:34:22.406Z",
+            "modified": "2023-07-21T13:23:36.024Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Jaded - EP\",\n  \"releasedDate\": \"2016-04-15T17:00:00.000Z\",\n  \"artist\": \"64ba866137193b8c0431f671\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7f33b722-238f-4887-b4ac-216d3e9aa3f0",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "301ccdb5-6ffd-4372-bb89-70ac2f8242c7",
+            "name": "Add Songs To Album",
+            "url": "http://localhost:5002/api/v1/albums/64ba06b2860306947719b421/",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2023-07-18T14:08:23.232Z",
+            "modified": "2023-07-21T13:24:40.845Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"songs\": [\"64ba19f6a9fc636bde52fa67\"]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1788c8a5-33ff-4dcf-a4fd-070edb5d6e15",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "685d7342-0c18-4a23-abc4-a91653c4563f",
+            "name": "Play Song",
+            "url": "http://localhost:5002/api/v1/song/play/64ba19f6a9fc636bde52fa67",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-07-21T05:40:59.146Z",
+            "modified": "2023-07-21T05:47:48.853Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "28a31a04-6645-40f8-90f8-e39a0ea4a18f",
+            "colId": "6d7afac6-613e-4ab3-ad33-10f2b2bfab1a",
+            "containerId": "685d7342-0c18-4a23-abc4-a91653c4563f",
+            "name": "Get All Song Sort by Most Play",
+            "url": "http://localhost:5002/api/v1/song/mostplayed/",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2023-07-21T05:48:22.769Z",
+            "modified": "2023-07-21T05:48:39.143Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
