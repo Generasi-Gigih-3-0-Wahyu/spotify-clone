@@ -9,10 +9,10 @@ import {
   createPlaylist,
   findPlaylistById,
   findPlaylistByUserId,
-  playSong,
+  playPlaylistSong,
 } from "../services/playlist.service";
 import { error, success } from "../utils/baseResponse";
-import { findSongById } from "../services/song.service";
+import { findSongById, playSong } from "../services/song.service";
 
 export async function createPlaylistController(
   req: Request<unknown, unknown, CreatePlaylistInput>,
@@ -127,7 +127,8 @@ export async function playSongController(
       .json(error("Song Not Found in Playlist", res.statusCode));
   }
 
-  const playingSong = await playSong(playlist, song);
+  const playingSong = await playPlaylistSong(playlist, song);
+  await playSong(song);
   return res
     .status(200)
     .json(success("Successfully Play Song", playingSong, res.statusCode));

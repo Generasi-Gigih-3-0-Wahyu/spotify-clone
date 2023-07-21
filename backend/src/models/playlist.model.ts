@@ -1,6 +1,6 @@
 import {
   Ref,
-  getModelForClass,
+  Severity,
   modelOptions,
   prop,
 } from "@typegoose/typegoose";
@@ -23,14 +23,6 @@ export class Playlist {
   @prop({ required: true })
   name: string;
 
-  @prop({ default: [] })
+  @prop({ default: [], allowMixed: Severity.ALLOW })
   songs: PlaylistSong[];
 }
-
-const PlaylistModel = getModelForClass(Playlist, {
-  schemaOptions: {
-    timestamps: true,
-  },
-});
-
-export default PlaylistModel;

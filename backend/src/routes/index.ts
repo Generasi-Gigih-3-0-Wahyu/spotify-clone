@@ -5,6 +5,8 @@ import user from "./user.route";
 import auth from "./auth.route";
 import song from "./song.route";
 import playlist from "./playlist.route";
+import album from "./album.route";
+import artist from "./artist.route";
 
 const router = express.Router();
 const baseURL = "/api/v1";
@@ -20,6 +22,8 @@ router.use(user);
 router.use(auth);
 router.use(song);
 router.use(playlist);
+router.use(album);
+router.use(artist);
 
 /**
  * *Callback for 404 error handling
